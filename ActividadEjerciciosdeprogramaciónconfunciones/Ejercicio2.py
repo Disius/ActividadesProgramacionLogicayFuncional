@@ -4,10 +4,12 @@ from fractions import Fraction
 # que un contador sea igual a N
 N = input("Ingresa un valor positivo y entero: ")
 
-def serie(N):
 
-    a = 0
-    1 - Fraction(1, N) + Fraction(1, N)
-    return N
+def serie(n):
+    s = [(-1) ** (i + 1) / i for i in range(1, n + 1)]
+    return sum(s)
 
-print(Fraction(1, 2))
+
+resultado_serie = serie(int(N))
+
+print(resultado_serie)
